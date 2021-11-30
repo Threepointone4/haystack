@@ -5,7 +5,10 @@ from haystack.preprocessor.utils import convert_files_to_dicts, fetch_archive_fr
 from haystack.reader.farm import FARMReader
 from haystack.utils import print_answers, launch_milvus
 from haystack.retriever.dense import DensePassageRetriever
+import warnings
 
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 def tutorial6_better_retrieval_via_dpr():
     # OPTION 1: FAISS is a library for efficient similarity search on a cluster of dense vectors.
     # The FAISSDocumentStore uses a SQL(SQLite in-memory be default) document store under-the-hood

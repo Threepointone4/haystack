@@ -10,7 +10,10 @@ from haystack.retriever.dense import DensePassageRetriever
 from haystack.reader import FARMReader
 from haystack.pipeline import ExtractiveQAPipeline, DocumentSearchPipeline, GenerativeQAPipeline, JoinDocuments
 from haystack.generator import RAGenerator
+import warnings
 
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 
 #Download and prepare data - 517 Wikipedia articles for Game of Thrones
 doc_dir = "data/article_txt_got"

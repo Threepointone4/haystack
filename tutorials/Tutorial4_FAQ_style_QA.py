@@ -9,6 +9,10 @@ import logging
 import subprocess
 import time
 
+import warnings
+
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 
 def tutorial4_faq_style_qa():
     ## "FAQ-Style QA": Utilizing existing FAQs for Question Answering

@@ -16,6 +16,10 @@ from haystack.reader.transformers import TransformersReader
 from haystack.retriever.sparse import TfidfRetriever
 from haystack.utils import print_answers
 
+import warnings
+
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 
 def tutorial3_basic_qa_pipeline_without_elasticsearch():
     # In-Memory Document Store

@@ -11,7 +11,10 @@ from haystack import Pipeline
 from farm.utils import initialize_device_settings
 
 import logging
+import warnings
 
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 logger = logging.getLogger(__name__)
 
 

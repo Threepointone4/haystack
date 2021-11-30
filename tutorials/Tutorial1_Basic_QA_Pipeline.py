@@ -22,6 +22,11 @@ from haystack.reader.transformers import TransformersReader
 from haystack.utils import print_answers, launch_es
 from haystack.retriever.sparse import ElasticsearchRetriever
 
+import warnings
+
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
+
 
 def tutorial1_basic_qa_pipeline():
     logger = logging.getLogger(__name__)

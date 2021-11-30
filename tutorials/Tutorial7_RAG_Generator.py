@@ -6,6 +6,10 @@ from haystack.document_store.faiss import FAISSDocumentStore
 from haystack.generator.transformers import RAGenerator
 from haystack.retriever.dense import DensePassageRetriever
 
+import warnings
+
+warnings.filterwarnings(action="ignore",module="torch")
+warnings.filterwarnings(action="ignore",module="transformers")
 
 def tutorial7_rag_generator():
     # Add documents from which you want generate answers
